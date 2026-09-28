@@ -1,0 +1,54 @@
+name: Deploy support site to GitHub Pages
+
+# Publishes SupportSite/ to GitHub Pages. Runs the static site checks first —
+# a failing check blocks deployment. Triggered on pushes to main that touch
+# the site, and manually via workflow_dispatch.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "scripts/test-support-site.sh"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run SupportSite static checks
+        run: ./scripts/test-support-site.sh
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload SupportSite artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

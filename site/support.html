@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aquarium Support</title>
+  <meta name="description" content="Get help with Aquarium for Mac: reporting issues, restoring purchases, troubleshooting displays and performance, and refunds.">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon.png" alt="" width="36" height="36">
+        <span>Aquarium</span>
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="index.html">Overview</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Support</h1>
+    <p class="lede">
+      Aquarium doesn't collect any usage data, so the best way to get help is to tell us
+      directly. Support is handled through GitHub Issues — there's no support email address.
+    </p>
+
+    <section aria-labelledby="report-heading">
+      <h2 id="report-heading">Report a problem or ask a question</h2>
+      <p>
+        Open an issue on GitHub:
+        <a href="https://github.com/GadgetManUk/Aquarium/issues">github.com/GadgetManUk/Aquarium/issues</a>.
+        You'll need a free GitHub account to post, but you can read existing issues without one.
+      </p>
+      <h3>What to include</h3>
+      <p>These details help us reproduce and fix problems quickly:</p>
+      <dl class="report-fields">
+        <dt>macOS version</dt>
+        <dd>Apple menu &rarr; About This Mac</dd>
+        <dt>Mac model</dt>
+        <dd>Apple menu &rarr; About This Mac (e.g. "MacBook Pro 16-inch, 2023" or "Mac Studio")</dd>
+        <dt>Display count</dt>
+        <dd>The number of displays connected to your Mac, and how many Aquarium is showing on</dd>
+        <dt>Aquarium version</dt>
+        <dd>Shown in the About Aquarium window as "Version X.Y.Z (build)"</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">Where is About Aquarium?</h2>
+      <p>
+        Open the About Aquarium window from either place:
+      </p>
+      <ul>
+        <li>The <strong>About</strong> button in the main Aquarium controls panel.</li>
+        <li>The <strong>About Aquarium…</strong> item in the Aquarium application menu.</li>
+      </ul>
+      <p>
+        About Aquarium shows the app version and build number, whether you have the Free
+        edition or Aquarium Pro, and links to Support, the Privacy Policy, and Restore
+        Purchases.
+      </p>
+    </section>
+
+    <section aria-labelledby="restore-heading">
+      <h2 id="restore-heading">Restore Purchases</h2>
+      <p id="restore-purchases">
+        If you've bought Aquarium Pro before — on this Mac or another one signed into the
+        same Apple Account — you can restore it without paying again.
+      </p>
+      <h3>From the About Aquarium window</h3>
+      <ol class="steps-list">
+        <li>Open <strong>About Aquarium</strong> (see above).</li>
+        <li>Click <strong>Restore Purchases</strong>.</li>
+        <li>Wait for "Checking the App Store…" to finish. You'll see "Purchases restored." if it succeeds.</li>
+      </ol>
+      <h3>From the upgrade sheet</h3>
+      <ol class="steps-list">
+        <li>Try to select a Pro-only display count, background, fish, or Ultra quality to open the Aquarium Pro upgrade sheet.</li>
+        <li>Click <strong>Restore Purchases</strong> in that sheet.</li>
+      </ol>
+      <div class="callout">
+        <strong>Signed in matters.</strong> Restore Purchases only finds purchases made with
+        the Apple Account currently signed in on this Mac (Apple menu &rarr; System Settings
+        &rarr; Apple Account). If you bought Aquarium Pro under a different Apple Account,
+        sign in with that account first.
+      </div>
+    </section>
+
+    <section aria-labelledby="trouble-heading">
+      <h2 id="trouble-heading">Troubleshooting</h2>
+
+      <div class="trouble-item">
+        <h3>I can't select two or three displays</h3>
+        <p>
+          Two things need to be true: Aquarium Pro must be unlocked, and enough displays need
+          to be connected. Free accounts are limited to one active display regardless of how
+          many are connected. If you already have Aquarium Pro, connect the extra displays
+          first — the display count selector only enables counts up to the number currently
+          connected.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>A display disconnected or was reconnected</h3>
+        <p>
+          If a display disconnects, Aquarium temporarily reduces the active display count. Your
+          preference isn't lost — when enough displays reconnect, Aquarium automatically
+          restores your chosen count without any action from you.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>Performance and rendering quality</h3>
+        <p>
+          Aquarium offers Gentle, Balanced, and Vivid rendering quality to everyone, and Ultra
+          quality with Aquarium Pro. Ultra targets native display resolution at up to 8K and is
+          more demanding on your Mac's GPU. If you notice reduced performance on Ultra,
+          especially across multiple displays, try Vivid or Balanced instead.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>Some fish aren't showing up</h3>
+        <p>
+          Check each species' enable switch and quantity in the fish selection panel — a
+          species set to zero, or switched off, won't appear. Some swimming varieties and
+          backgrounds require Aquarium Pro; free accounts see clownfish, blue tang, and yellow
+          tang only.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>How do I get back from interactive mode?</h3>
+        <p>
+          Press <kbd>Esc</kbd> at any time while in interactive mode to return to desktop mode.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>How do I pause the aquarium?</h3>
+        <p>
+          Use the Pause control in the main controls panel. Aquarium shows "OCEAN PAUSED" while
+          paused, and you can resume from the same control.
+        </p>
+      </div>
+
+      <div class="trouble-item">
+        <h3>My purchase says "pending" or mentions Ask to Buy</h3>
+        <p>
+          If a purchase was made with Ask to Buy (for example, by a family member), it can
+          remain pending until approved. Aquarium shows a pending state and won't unlock Pro
+          features until the purchase is approved through the Apple Account that requested it.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="refunds-heading">
+      <h2 id="refunds-heading">Refunds</h2>
+      <p>
+        All Aquarium purchases are processed by Apple. Refunds are handled by Apple, not by us —
+        request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>&copy; 2026 Paul Hilton</span>
+      <nav aria-label="Footer">
+        <a href="index.html">Overview</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/GadgetManUk/Aquarium/issues">GitHub Issues</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
